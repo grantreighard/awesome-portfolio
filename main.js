@@ -1,4 +1,7 @@
 import './style.css';
+import spaceUrl from './space.jpg';
+import kittyUrl from './kitty.jpeg';
+import earthUrl from './flat_earth.jpg';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -43,10 +46,10 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('public/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spaceUrl);
 scene.background = spaceTexture;
 
-const kittyTexture = new THREE.TextureLoader().load('public/kitty.jpeg');
+const kittyTexture = new THREE.TextureLoader().load(kittyUrl);
 const kitty = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: kittyTexture })
@@ -54,7 +57,7 @@ const kitty = new THREE.Mesh(
 
 scene.add(kitty);
 
-const earthTexture = new THREE.TextureLoader().load('public/flat_earth.jpg');
+const earthTexture = new THREE.TextureLoader().load(earthUrl);
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
