@@ -1,0 +1,18 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+main {
+  position: absolute;
+}
+
+p {
+  color: transparent;
+  font-size: 100px;
+  z-index: -100;
+  user-select: none;
+  z-index: -100;
+}
