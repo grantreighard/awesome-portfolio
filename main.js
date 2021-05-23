@@ -43,10 +43,10 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('public/space.jpg');
 scene.background = spaceTexture;
 
-const kittyTexture = new THREE.TextureLoader().load('kitty.jpeg');
+const kittyTexture = new THREE.TextureLoader().load('public/kitty.jpeg');
 const kitty = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
   new THREE.MeshBasicMaterial({ map: kittyTexture })
@@ -54,7 +54,7 @@ const kitty = new THREE.Mesh(
 
 scene.add(kitty);
 
-const earthTexture = new THREE.TextureLoader().load('flat_earth.jpg');
+const earthTexture = new THREE.TextureLoader().load('public/flat_earth.jpg');
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
